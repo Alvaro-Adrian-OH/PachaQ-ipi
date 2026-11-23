@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organiza integrantes, roles y necesidades de tu familia.">
+  <title>Mi familia - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="family">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Familia · Grupo familiar</p><h1 id="page-title">Mi grupo familiar</h1><p class="lead">Organiza los roles y necesidades de quienes viven contigo.</p></header>
+        <div class="section-heading"><h2>Integrantes registrados</h2><span class="tag"><span data-family-count>2</span> personas</span></div>
+        <section id="family-list" aria-label="Integrantes de la familia"></section>
+        <p><a class="text-button" href="map.html">Ver mapa y punto de encuentro</a></p>
+        <section class="card" aria-labelledby="roles-title">
+          <div class="card-heading"><h2 id="roles-title">Asignación de roles</h2></div>
+          <div class="list-row"><span><strong>Mochila de emergencia</strong><small>Responsable de llevar el kit</small></span><b class="small-note">Joaquer</b></div>
+          <div class="list-row"><span><strong>Asistencia a adulto mayor</strong><small>Apoyo durante la evacuación</small></span><b class="small-note">Joaquer</b></div>
+        </section>
+        <section class="card soft space-top-small">
+          <div class="card-heading"><h2>Necesidades especiales</h2><span class="tag gold">1 pendiente</span></div>
+          <p class="muted">Recuerda asignar una persona de apoyo para la evacuación de María.</p>
+        </section>
+        <form class="card item-form stack" data-form="add-member" aria-labelledby="add-member-title">
+          <h2 id="add-member-title">Agregar integrante</h2>
+          <div class="field"><label for="member-name">Nombre</label><input id="member-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="member-role">Rol en la familia</label><select id="member-role" name="role"><option>Integrante</option><option>Adulto</option><option>Niño o niña</option><option>Adulto mayor</option></select></div>
+          <div class="field"><label for="member-note">Necesidad o condición</label><input id="member-note" name="note" placeholder="Sin condición especial"></div>
+          <button class="button secondary" type="submit">Guardar integrante</button>
+        </form>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

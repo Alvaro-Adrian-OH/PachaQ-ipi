@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Identifica el entorno y los riesgos cercanos a tu vivienda.">
+  <title>Diagnóstico de vivienda - Ubicación - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="plan">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Evaluación del hogar</p><h1 id="page-title">Ubicación y entorno</h1><p class="lead">Identifica los riesgos que podrían afectar a tu vivienda.</p></header>
+        <div class="steps" aria-label="Paso 3 de 4"><div class="progress-track"><span class="progress-fill-75"></span></div><span class="step-label">Paso 3 de 4</span></div>
+        <section aria-labelledby="location-title">
+          <h2 class="eyebrow" id="location-title">Entorno de la vivienda</h2>
+          <div class="option-list">
+            <button class="option" type="button" data-select="location" data-value="Ladera de cerro o suelo inestable" aria-pressed="true"><span><strong>Ladera de cerro o suelo inestable</strong><small>Riesgo de deslizamiento</small></span><span class="option-state">Seleccionado</span></button>
+            <button class="option" type="button" data-select="location" data-value="Zona costera" aria-pressed="false"><span><strong>Zona costera</strong><small>Considera el riesgo de tsunami</small></span><span class="option-state">Elegir</span></button>
+            <button class="option" type="button" data-select="location" data-value="Suelo plano o urbano firme" aria-pressed="false"><span><strong>Suelo plano o urbano firme</strong><small>Riesgo menor de deslizamiento</small></span><span class="option-state">Elegir</span></button>
+          </div>
+        </section>
+        <div class="button-row"><a class="button secondary" href="assessment-floors.html">Atrás</a><a class="button green full" href="assessment-review.html">Siguiente: resumen</a></div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

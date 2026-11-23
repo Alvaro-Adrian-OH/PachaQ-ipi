@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Escenario de práctica de respuesta ante un sismo en transporte.">
+  <title>Simulacro interactivo - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="simulate">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section narrow" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Entrenamiento · En curso</p><h1 id="page-title">Simulacro interactivo</h1><p class="lead">El bus está en movimiento y comienza un sismo. Elige qué harías.</p></header>
+        <div class="timer-bar"><span>Escenario de sismo · Magnitud 7.5</span><time datetime="PT15S">00:15</time></div>
+        <section class="card space-top-small" aria-labelledby="question-title">
+          <h2 id="question-title">¿Qué acción tomas dentro del transporte público?</h2>
+          <form class="choice-form space-top-medium" data-form="simulation">
+            <label class="choice-option"><input type="radio" name="answer" value="A" required><span><strong>A. Salir corriendo por las ventanas inmediatamente.</strong></span></label>
+            <label class="choice-option"><input type="radio" name="answer" value="B"><span><strong>B. Sujetarte firmemente y esperar a que el bus se detenga.</strong></span></label>
+            <label class="choice-option"><input type="radio" name="answer" value="C"><span><strong>C. Empujar para salir por la puerta delantera.</strong></span></label>
+            <button class="button full" type="submit">Confirmar respuesta</button>
+          </form>
+        </section>
+        <p class="small-note space-top-small text-center">Mantén la calma y sigue las instrucciones del conductor.</p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evalúa el material predominante de tu vivienda.">
+  <title>Diagnóstico de vivienda - Material - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="plan">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Evaluación del hogar</p><h1 id="page-title">¿De qué material está construida tu vivienda?</h1><p class="lead">Selecciona el material predominante de la estructura de tu vivienda.</p></header>
+        <div class="steps" aria-label="Paso 1 de 4"><div class="progress-track"><span class="progress-fill-25"></span></div><span class="step-label">Paso 1 de 4</span></div>
+        <section aria-labelledby="material-title">
+          <h2 class="eyebrow" id="material-title">Material de construcción</h2>
+          <div class="option-list">
+            <button class="option" type="button" data-select="material" data-value="Material noble (concreto o ladrillo)" aria-pressed="true"><span><strong>Material noble</strong><small>Concreto o ladrillo</small></span><span class="option-state">Seleccionado</span></button>
+            <button class="option" type="button" data-select="material" data-value="Adobe o quincha" aria-pressed="false"><span><strong>Adobe o quincha</strong></span><span class="option-state">Elegir</span></button>
+            <button class="option" type="button" data-select="material" data-value="Madera o prefabricado" aria-pressed="false"><span><strong>Madera o prefabricado</strong></span><span class="option-state">Elegir</span></button>
+          </div>
+        </section>
+        <p class="button-row"><a class="button green full" href="assessment-floors.html">Siguiente: pisos y estado</a></p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

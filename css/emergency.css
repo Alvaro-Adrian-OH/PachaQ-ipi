@@ -1,0 +1,107 @@
+.alert-panel {
+  display: grid;
+  min-height: 390px;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 25px 20px;
+  color: white;
+  background: #1d1e22;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.alert-symbol {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 2px solid #e53a4a;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.alert-panel h2 {
+  color: white;
+  font-size: 38px;
+}
+
+.alert-panel .muted {
+  color: #babcc2;
+}
+
+.alert-countdown {
+  padding: 8px 12px;
+  color: #8e1d24;
+  background: #ffeaeb;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sos-page {
+  width: min(100%, 840px);
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 36px clamp(20px, 6vw, 70px);
+  color: white;
+  background: #8f2023;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.sos-button {
+  display: grid;
+  width: 84px;
+  height: 84px;
+  margin: 13px auto 20px;
+  place-items: center;
+  color: white;
+  background: #e33b41;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgb(255 255 255 / 9%);
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.sos-page h1,
+.sos-page h2 {
+  color: white;
+}
+
+.sos-page .lead {
+  margin-right: auto;
+  margin-left: auto;
+  color: #f0caca;
+}
+
+.sos-contact {
+  margin-top: 20px;
+  padding: 15px;
+  color: #8f2023;
+  background: white;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.timer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px;
+  color: white;
+  background: #20232a;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.timer-bar time {
+  color: #ee5962;
+  font-variant-numeric: tabular-nums;
+}

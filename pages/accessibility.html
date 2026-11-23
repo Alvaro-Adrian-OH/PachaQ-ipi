@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ajusta el tamaño de texto y el contraste de PachaQ’ipi.">
+  <title>Accesibilidad - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="profile">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Configuración · Accesibilidad</p><h1 id="page-title">Ajustes de accesibilidad</h1><p class="lead">Personaliza la lectura y los controles para tu familia.</p></header>
+        <section class="card" aria-labelledby="reading-title">
+          <div class="card-heading"><h2 id="reading-title">Lectura y visualización</h2></div>
+          <label class="list-row accessibility-toggle"><span><strong>Modo adulto mayor o simplificado</strong><small>Mayor tamaño de texto y controles</small></span><input class="switch" type="checkbox" data-pref="simpleMode" aria-label="Activar modo simplificado"></label>
+          <label class="list-row accessibility-toggle"><span><strong>Texto ampliado</strong><small>Mejora la legibilidad</small></span><input class="switch" type="checkbox" data-pref="largeText" aria-label="Ampliar texto"></label>
+          <label class="list-row accessibility-toggle"><span><strong>Alto contraste o modo oscuro</strong><small>Cambia los colores de la pantalla</small></span><input class="switch" type="checkbox" data-pref="dark" aria-label="Activar modo oscuro"></label>
+        </section>
+        <p class="space-top-medium"><a class="button secondary" href="profile.html">Volver a configuración</a></p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

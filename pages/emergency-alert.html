@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Acciones iniciales para una alerta sísmica.">
+  <title>Alerta sísmica - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="home">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section narrow" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Alertas · Cuenta regresiva</p><h1 id="page-title">Alerta sísmica en curso</h1><p class="lead">Ubícate en tu zona segura y mantente atento a las indicaciones oficiales.</p></header>
+        <section class="alert-panel" aria-label="Información de alerta simulada">
+          <span class="alert-symbol" aria-hidden="true">!</span>
+          <h2>Magnitud 6.2</h2>
+          <p class="muted">Alerta sísmica · En curso</p>
+          <span class="alert-countdown">Ondas en llegada: 10 segundos</span>
+          <p class="small-note">Ubícate en una zona segura inmediatamente.</p>
+        </section>
+        <div class="stack section-spaced">
+          <a class="button green full" href="evacuation.html">Abrir guía de evacuación</a>
+          <a class="button secondary full" href="emergency-confirm.html">El movimiento terminó · Confirmar estado</a>
+          <a class="button danger full" href="sos.html">Necesito ayuda urgentemente</a>
+        </div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Identifica zonas seguras dentro y fuera de casa.">
+  <title>Zonas seguras - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="zones">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Preparación · Zonas seguras</p><h1 id="page-title">Zonas seguras internas y externas</h1><p class="lead">Acuerden un punto seguro dentro de casa y un lugar de encuentro fuera de ella.</p></header>
+        <section class="card" aria-labelledby="zones-title"><div class="card-heading"><h2 id="zones-title">Zonas identificadas</h2><span class="tag">Plan familiar</span></div><div id="safe-zone-list" aria-live="polite"></div></section>
+        <section class="map-panel" aria-label="Resumen de la ruta familiar">
+          <img src="../assets/images/mapa_zona_segura.jpg" alt="Mapa de zonas seguras" class="map-image">
+
+          <div class="map-locations">
+            <span class="map-place">Casa</span>
+            <span aria-hidden="true">-></span>
+            <span class="map-place">Punto de encuentro</span>
+          </div>
+        </section>
+        <form class="card item-form stack" data-form="add-zone" aria-labelledby="add-zone-title">
+          <h2 id="add-zone-title">Agregar una zona segura</h2>
+          <div class="field"><label for="zone-name">Nombre o referencia</label><input id="zone-name" name="zone" placeholder="Ej.: Parque del barrio" required></div>
+          <button class="button secondary" type="submit">Guardar zona</button>
+        </form>
+        <p class="notice space-top-small">Mantente lejos de ventanas, muebles altos y cables eléctricos. Sigue las indicaciones de las autoridades.</p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

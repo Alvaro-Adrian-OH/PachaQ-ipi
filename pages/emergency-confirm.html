@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirma tu estado y avisa a tu grupo familiar.">
+  <title>Confirmar estado - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="home">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section narrow center-content" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Alertas · Fin del sismo</p><h1 id="page-title">El movimiento telúrico ha finalizado</h1><p class="lead">Confirma tu estado para avisar a tu grupo familiar.</p></header>
+        <span class="loading-mark">Estado</span>
+        <div class="stack">
+          <a class="button green full" href="emergency-sent.html">Confirmar que estoy bien</a>
+          <a class="button danger full" href="sos.html">Necesito ayuda urgentemente</a>
+        </div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

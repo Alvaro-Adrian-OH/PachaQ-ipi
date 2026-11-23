@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Graba una nota de voz para tu familia cuando no haya conexión.">
+  <title>Nota de voz - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="voice">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section narrow center-content" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Comunicación · Nota de voz</p><h1 id="page-title">Grabación con envío diferido</h1><p class="lead">Si no hay señal, tu nota quedará lista para enviar al recuperar conexión.</p></header>
+        <span class="loading-mark">Audio</span>
+        <h2>Graba una nota breve</h2>
+        <p class="muted">Deja un mensaje para tu familia. La demostración guarda el estado de grabación en este dispositivo.</p>
+        <button class="button full section-spaced" type="button" data-action="record">Grabar nota (00:10)</button>
+        <p class="small-note" data-record-status>Audio no grabado.</p>
+        <p class="section-spaced"><a class="button secondary full" href="home.html">Volver al inicio</a></p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

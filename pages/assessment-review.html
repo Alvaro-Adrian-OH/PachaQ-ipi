@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Revisa los datos de tu vivienda antes de generar el plan.">
+  <title>Diagnóstico de vivienda - Resumen - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="plan">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Evaluación del hogar</p><h1 id="page-title">Resumen de tu vivienda</h1><p class="lead">Revisa los datos antes de crear tu diagnóstico personalizado.</p></header>
+        <div class="steps" aria-label="Paso 4 de 4"><div class="progress-track"><span class="progress-fill-100"></span></div><span class="step-label">Paso 4 de 4</span></div>
+        <section class="card" aria-labelledby="summary-title">
+          <div class="card-heading"><h2 id="summary-title">Resumen de datos de la vivienda</h2></div>
+          <div class="summary-list">
+            <div class="summary-row"><span>Material</span><strong data-assessment-field="material">Material noble (concreto o ladrillo)</strong></div>
+            <div class="summary-row"><span>Pisos</span><strong data-assessment-field="floors">2 pisos</strong></div>
+            <div class="summary-row"><span>Estado</span><strong data-assessment-field="construction">Terminada totalmente</strong></div>
+            <div class="summary-row"><span>Entorno</span><strong data-assessment-field="location">Ladera de cerro o suelo inestable</strong></div>
+          </div>
+        </section>
+        <div class="stack section-spaced">
+          <a class="button green full" href="assessment-loading.html">Procesar diagnóstico</a>
+          <a class="button secondary full" href="assessment-location.html">Volver a editar</a>
+        </div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

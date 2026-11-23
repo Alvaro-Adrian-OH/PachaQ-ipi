@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Opciones para compartir una solicitud de ayuda con tu familia.">
+  <title>Baliza SOS - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="home">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="sos-page" aria-labelledby="page-title">
+        <button class="sos-button" type="button" data-action="sos-call" aria-label="Activar aviso SOS">SOS</button>
+        <h1 id="page-title">Baliza SOS activada</h1>
+        <p class="lead">Comparte tu ubicación con tu familia para facilitar el apoyo.</p>
+        <div class="sos-contact">CONTACTO CON TU GRUPO FAMILIAR<br><span>Comparte tu punto de encuentro</span></div>
+        <div class="stack section-spaced">
+          <button class="button full" type="button" data-action="copy-location">Compartir punto de encuentro</button>
+          <button class="button green full" type="button" data-action="deactivate-sos">Desactivar aviso SOS</button>
+        </div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

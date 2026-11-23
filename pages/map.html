@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapa familiar y punto de encuentro disponible sin conexión.">
+  <title>Mapa familiar - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="family">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Familia · Mapa y modo sin conexión</p><h1 id="page-title">Última ubicación y mapa familiar</h1><p class="lead">Consulta los puntos de encuentro y las zonas seguras de la familia.</p></header>
+        <div class="card-heading"><h2>Modo sin conexión activo</h2><span class="tag">Disponible</span></div>
+        <section class="map-panel" aria-label="Resumen textual del mapa familiar">
+          <span class="tag">Modo sin conexión</span>
+          <div class="map-locations"><span class="map-place">Casa</span><span aria-hidden="true">-></span><span class="map-place">Parque Zonal</span></div>
+          <img src="../assets/images/mapa_zona_segura.jpg" alt="Mapa familiar y punto de encuentro" class="map-image">
+        </section>
+        <section class="card space-top-small">
+          <div class="card-heading"><h2>Punto de encuentro recomendado</h2></div>
+          <div class="list-row"><span><strong>Parque Zonal</strong><small>Zona despejada · 1,2 km</small></span><span class="tag">Seguro</span></div>
+          <p class="muted">Ruta peatonal libre de edificios altos. Tiempo estimado: 15 minutos.</p>
+          <button class="button secondary full" type="button" data-action="map-route">Ver ruta al punto seguro</button>
+        </section>
+        <p class="space-top-medium"><a class="text-button" href="family.html">Volver a mi grupo familiar</a></p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

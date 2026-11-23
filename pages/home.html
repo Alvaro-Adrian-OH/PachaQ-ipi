@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Panel de preparación familiar ante sismos.">
+  <title>Inicio - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="home">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content dashboard-page" aria-labelledby="greeting">
+        <header class="dashboard-heading">
+          <div>
+            <p class="eyebrow">Centro de preparación familiar · <span data-today></span></p>
+            <h1 id="greeting" data-greeting>Buenos días, familia Querales</h1>
+            <p class="lead">Cada pequeño paso fortalece la seguridad de quienes más quieres.</p>
+          </div>
+          <a class="button secondary" href="family.html">Mi familia · <span data-family-count>2</span></a>
+        </header>
+        <div class="dashboard-grid">
+          <div class="dashboard-main">
+            <section class="welcome-hero" aria-labelledby="hero-title">
+              <div class="welcome-copy">
+                <p class="eyebrow">Un hogar más preparado</p>
+                <h2 id="hero-title">La prevención empieza en casa.</h2>
+                <p>Un plan familiar claro ayuda a tomar mejores decisiones antes, durante y después de un sismo.</p>
+                <div class="welcome-actions">
+                  <a class="button green" href="plan.html">Ver mi plan familiar</a>
+                  <a class="text-button" href="assessment-material.html">Completar diagnóstico</a>
+                </div>
+              </div>
+              <div class="welcome-art-slot" aria-hidden="true">
+                <img src="../assets/images/family_panel.png" alt="Familia preparada ante sismos" class="welcome-art-image">
+              </div>
+            </section>
+            <div class="dashboard-section-title">
+              <div><p class="eyebrow">Tu progreso</p><h2>Prepararse es avanzar paso a paso</h2></div>
+              <a class="text-button" href="kit.html">Ver checklist</a>
+            </div>
+            <section class="card progress-card" aria-labelledby="progress-title">
+              <div class="card-heading"><div><p class="eyebrow">Preparación familiar</p><h3 id="progress-title">Van por buen camino</h3></div><span class="tag">En progreso</span></div>
+              <div class="progress-line">
+                <span class="progress-ring">62%</span>
+                <div class="progress-detail"><div class="progress-track" aria-label="Preparación al 62 por ciento"><span class="progress-fill-62"></span></div><p class="muted">3 tareas pendientes para estar 100% listos</p></div>
+              </div>
+              <a class="text-button" href="kit.html">Continuar preparación</a>
+            </section>
+            <div class="dashboard-section-title">
+              <div><p class="eyebrow">Siguiente paso</p><h2>Accesos para tu familia</h2></div>
+            </div>
+            <nav class="quick-grid" aria-label="Accesos rápidos">
+              <a class="quick-card" href="simulate.html"><strong>Practicar un simulacro</strong><small>Ensayen qué hacer juntos</small></a>
+              <a class="quick-card" href="zones.html"><strong>Revisar zonas seguras</strong><small>Dos lugares identificados</small></a>
+              <a class="quick-card" href="kit.html"><strong>Preparar la mochila</strong><small>Revisar insumos y fechas</small></a>
+              <a class="quick-card" href="resources.html"><strong>Calcular provisiones</strong><small>Agua y alimentos esenciales</small></a>
+            </nav>
+          </div>
+          <aside class="dashboard-aside" aria-label="Resumen familiar">
+            <section class="card readiness-card">
+              <div class="card-heading"><div><p class="eyebrow">Resumen de seguridad</p><h3>Diagnóstico del hogar</h3></div><span class="tag gold">Riesgo medio</span></div>
+              <div class="risk-row"><span class="risk-indicator" aria-hidden="true"></span><span><strong>Recomendaciones personalizadas</strong><small>Revisa los puntos de seguridad de tu hogar.</small></span></div>
+              <p class="muted">Refuerza los anclajes en la vivienda y completa el kit de emergencia.</p>
+              <a class="button secondary full" href="plan.html">Ver recomendaciones</a>
+            </section>
+            <section class="card today-card">
+              <div class="card-heading"><div><p class="eyebrow">Para hoy</p><h3>Un paso simple · 5 min</h3></div></div>
+              <p class="muted"><strong>Revisa tu punto de encuentro.</strong> Asegúrate de que toda la familia lo recuerde.</p>
+              <a class="text-button" href="zones.html">Ver zonas seguras</a>
+            </section>
+            <section class="family-card">
+              <div class="family-card-top"><div><p class="eyebrow">En equipo</p><h3>Tu grupo familiar</h3></div><a class="text-button" href="family.html">Ver todos</a></div>
+              <div class="family-avatars" aria-hidden="true"><span class="member-initials">JQ</span><span class="member-initials">MQ</span><a class="add-avatar" href="family.html" aria-label="Administrar integrantes">+</a></div>
+              <p class="muted"><span data-family-count>2</span> integrantes · Roles y necesidades</p>
+            </section>
+            <section class="emergency-card">
+              <div class="emergency-card-copy"><strong>¿Necesitas ayuda ahora?</strong><small>Accede a las opciones de emergencia.</small></div>
+              <a class="button small danger" href="emergency-alert.html">Abrir</a>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
