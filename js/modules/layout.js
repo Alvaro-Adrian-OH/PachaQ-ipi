@@ -1,13 +1,13 @@
 const sections = [
-  { page: "home", href: "home.html", label: "Inicio", icon: "../../assets/icons/home.svg" },
-  { page: "family", href: "family.html", label: "Familia", icon: "../../assets/icons/family_fff.svg" },
-  { page: "plan", href: "plan.html", label: "Plan familiar", icon: "../../assets/icons/plan.svg" },
-  { page: "zones", href: "zones.html", label: "Zonas seguras", icon: "../../assets/icons/shield_check_fff.svg" },
-  { page: "voice", href: "voice.html", label: "Nota de voz", mobileLabel: "Voz", icon: "../../assets/icons/voice.svg" },
-  { page: "kit", href: "kit.html", label: "Mochila", icon: "../../assets/icons/backpack.svg" },
-  { page: "simulate", href: "simulate.html", label: "Simulacros", icon: "../../assets/icons/play_circle.svg" },
-  { page: "resources", href: "resources.html", label: "Recursos", icon: "../../assets/icons/resources.svg" },
-  { page: "profile", href: "profile.html", label: "Configuración", icon: "../../assets/icons/settings.svg" }
+  { page: "home", href: "home.html", label: "Inicio", icon: "../assets/icons/home.svg" },
+  { page: "family", href: "family.html", label: "Familia", icon: "../assets/icons/family_fff.svg" },
+  { page: "plan", href: "plan.html", label: "Plan familiar", icon: "../assets/icons/plan.svg" },
+  { page: "zones", href: "zones.html", label: "Zonas seguras", icon: "../assets/icons/shield_check_fff.svg" },
+  { page: "voice", href: "voice.html", label: "Nota de voz", mobileLabel: "Voz", icon: "../assets/icons/voice.svg" },
+  { page: "kit", href: "kit.html", label: "Mochila", icon: "../assets/icons/backpack.svg" },
+  { page: "simulate", href: "simulate.html", label: "Simulacros", icon: "../assets/icons/play_circle.svg" },
+  { page: "resources", href: "resources.html", label: "Recursos", icon: "../assets/icons/resources.svg" },
+  { page: "profile", href: "profile.html", label: "Configuración", icon: "../assets/icons/settings.svg" }
 ];
 
 function makeLinks(currentPage, mobile) {
@@ -40,7 +40,7 @@ export function renderLayout() {
 
   header.innerHTML =
     '<a class="brand" href="' + (isAuth ? "login.html" : "home.html") + '" aria-label="PachaQ’ipi, inicio">' +
-      '<span class="brand-mark" aria-hidden="true"><img src="../../assets/images/logo_pachaqipi.png" alt="Logo PachaQ’ipi" class="brand-logo"></span><span>PachaQ’ipi</span></a>' +
+      '<span class="brand-mark" aria-hidden="true"><img src="../assets/images/logo_pachaqipi.png" alt="Logo PachaQ’ipi" class="brand-logo"></span><span>PachaQ’ipi</span></a>' +
     (isAuth
       ? '<p class="header-context">Preparación familiar · Andes</p>'
       : '<p class="header-context">Centro de preparación familiar</p>' +
