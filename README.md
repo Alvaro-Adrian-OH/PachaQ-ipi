@@ -1,8 +1,8 @@
-# PachaQ’ipi
+# PachaQ'ipi
 
 Sitio web de preparación familiar ante sismos. La portada de index.html abre el acceso ubicado en pages/login.html.
 
-## Organización
+## Estructura
 
 - pages/: una página HTML para cada sección y flujo de la interfaz.
 - css/: estilos separados para la base visual, componentes, páginas, panel, acceso y tamaños de pantalla.
