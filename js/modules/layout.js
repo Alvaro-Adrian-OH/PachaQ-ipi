@@ -7,6 +7,8 @@ const sections = [
   { page: "kit", href: "kit.html", label: "Mochila", icon: "../assets/icons/backpack.svg" },
   { page: "simulate", href: "simulate.html", label: "Simulacros", icon: "../assets/icons/play_circle.svg" },
   { page: "resources", href: "resources.html", label: "Recursos", icon: "../assets/icons/resources.svg" },
+  { page: "shelters", href: "shelters.html", label: "Refugios y salud", icon: "../assets/icons/landing-pin.svg" },
+  { page: "firstaid", href: "first-aid.html", label: "Primeros auxilios", icon: "../assets/icons/shield_check_fff.svg" },
   { page: "profile", href: "profile.html", label: "Configuración", icon: "../assets/icons/settings.svg" }
 ];
 
