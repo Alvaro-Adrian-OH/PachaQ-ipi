@@ -105,8 +105,8 @@ export function renderLayout() {
   const header = document.getElementById("site-header");
   const sidebar = document.getElementById("side-navigation");
   const mobileNav = document.getElementById("mobile-navigation");
-  const morePages = ["kit", "simulate", "resources", "profile"].includes(currentPage);
-
+  const morePages = ["kit", "simulate", "resources", "shelters", "firstaid", "profile"].includes(currentPage);
+  
   if (isAuth) {
     document.getElementById("site-layout").classList.add("auth-layout");
   }
