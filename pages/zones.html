@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Identifica zonas seguras dentro y fuera de casa.">
   <title>Zonas seguras - PachaQ’ipi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" type="image/jpeg" href="../favicon.jpg">
 </head>
@@ -15,20 +16,88 @@
     <main class="main-content">
       <section class="page-content page-section" aria-labelledby="page-title">
         <header class="page-head"><p class="eyebrow">Preparación · Zonas seguras</p><h1 id="page-title">Zonas seguras internas y externas</h1><p class="lead">Acuerden un punto seguro dentro de casa y un lugar de encuentro fuera de ella.</p></header>
-        <section class="card" aria-labelledby="zones-title"><div class="card-heading"><h2 id="zones-title">Zonas identificadas</h2><span class="tag">Plan familiar</span></div><div id="safe-zone-list" aria-live="polite"></div></section>
-        <section class="map-panel" aria-label="Resumen de la ruta familiar">
-          <img src="../assets/images/mapa_zona_segura.jpg" alt="Mapa de zonas seguras" class="map-image">
+        <section class="card" aria-labelledby="zones-title"><div class="card-heading"><h2 id="zones-title">Zonas identificadas</h2><span class="tag">Plan familiar · San Miguel</span></div><div id="safe-zone-list" aria-live="polite"></div></section>
+        <section class="map-panel" aria-labelledby="map-route-title">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">Google Maps · Ruta peatonal más rápida</p>
+              <h2 id="map-route-title">Navegación a pie en San Miguel, Lima</h2>
+            </div>
+            <span class="tag" data-location-badge>Ubicación simulada</span>
+          </div>
+
+          <label class="list-row accessibility-toggle map-gps-toggle" for="real-location-switch">
+            <span>
+              <strong>Habilitar ubicación real (GPS en tiempo real)</strong>
+              <small data-location-coords>Modo simulación activo: -12.0789, -77.0901</small>
+            </span>
+            <input class="switch" type="checkbox" id="real-location-switch" data-real-location-toggle aria-label="Habilitar ubicación real en tiempo real">
+          </label>
+
+          <div class="map-target-group" role="group" aria-label="Elegir destino de ruta peatonal">
+            <button class="button small green" type="button" data-route-target="safeZone" aria-pressed="true">Ir a zona segura (Parque Media Luna)</button>
+            <button class="button small secondary" type="button" data-route-target="home" aria-pressed="false">Ir a mi casa (San Miguel)</button>
+          </div>
+
+          <div class="map-route-summary" aria-live="polite" aria-atomic="true">
+            <div class="map-route-stat">
+              <span>Destino</span>
+              <strong data-route-dest>Zona segura · Parque Media Luna, San Miguel</strong>
+            </div>
+            <div class="map-route-stat">
+              <span>Ruta peatonal</span>
+              <strong data-route-metrics>Calculando distancia…</strong>
+            </div>
+          </div>
+
+          <div class="map-frame-wrap">
+            <div
+              id="zone-map"
+              class="map-canvas"
+              role="region"
+              aria-label="Mapa interactivo de Google Maps con ruta peatonal en San Miguel, Lima">
+            </div>
+          </div>
 
           <div class="map-locations">
-            <span class="map-place">Casa</span>
-            <span aria-hidden="true">-></span>
-            <span class="map-place">Punto de encuentro</span>
+            <span class="map-place" data-route-origin-pill>Tu ubicación (Simulada)</span>
+            <span aria-hidden="true">→</span>
+            <span class="map-place" data-route-dest-pill>Parque Media Luna, San Miguel</span>
+          </div>
+
+          <div class="button-row">
+            <a class="button green" href="https://www.google.com/maps/dir/?api=1&origin=-12.0789,-77.0901&destination=-12.0802,-77.0875&travelmode=walking" target="_blank" rel="noopener noreferrer" data-open-gmaps>Abrir ruta peatonal en Google Maps</a>
+            <button class="button secondary" type="button" data-action="refresh-gps">Actualizar ubicación</button>
           </div>
         </section>
         <form class="card item-form stack" data-form="add-zone" aria-labelledby="add-zone-title">
-          <h2 id="add-zone-title">Agregar una zona segura</h2>
-          <div class="field"><label for="zone-name">Nombre o referencia</label><input id="zone-name" name="zone" placeholder="Ej.: Parque del barrio" required></div>
-          <button class="button secondary" type="submit">Guardar zona</button>
+          <div class="card-heading">
+            <h2 id="add-zone-title">Agregar una zona segura</h2>
+            <span class="tag">Coordenadas o pin</span>
+          </div>
+          <div class="field">
+            <label for="zone-name">Nombre o referencia</label>
+            <input id="zone-name" name="zone" placeholder="Ej.: Parque Juan Pablo II, San Miguel" required>
+          </div>
+          <div class="field">
+            <label for="zone-maps-link">Pegar enlace o pin de Google Maps (opcional)</label>
+            <div class="input-with-action">
+              <input id="zone-maps-link" name="mapsLink" type="text" placeholder="Ej.: https://maps.google.com/?q=-12.0765,-77.0842 o -12.0765, -77.0842">
+              <button class="button secondary small" type="button" data-action="paste-zone-link">Pegar del portapapeles</button>
+            </div>
+            <small class="small-note" data-paste-status aria-live="polite">Pega un enlace de Google Maps o coordenadas y se completarán automáticamente.</small>
+          </div>
+          <div class="coords-grid">
+            <div class="field">
+              <label for="zone-lat">Latitud</label>
+              <input id="zone-lat" name="lat" type="number" step="any" min="-90" max="90" placeholder="-12.0765">
+            </div>
+            <div class="field">
+              <label for="zone-lng">Longitud</label>
+              <input id="zone-lng" name="lng" type="number" step="any" min="-180" max="180" placeholder="-77.0842">
+            </div>
+          </div>
+          <button class="button green" type="submit">Guardar zona segura</button>
         </form>
         <p class="notice space-top-small">Mantente lejos de ventanas, muebles altos y cables eléctricos. Sigue las indicaciones de las autoridades.</p>
       </section>
@@ -36,6 +105,7 @@
     <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
     <div class="toast" id="toast" role="status" hidden></div>
   </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script type="module" src="../js/main.js"></script>
 </body>
 </html>

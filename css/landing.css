@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --font-family: "Roboto", sans-serif;
   --radius: 14px;
@@ -81,10 +87,14 @@ a {
   border-radius: 8px; 
   background: var(--brown-dark); 
   color: #fff; 
+  font-weight: 700;
+  transition: transform .18s ease;
 }
 
-.skip-link:focus { transform: translateY(0); }
-:focus-visible { outline: 3px solid #9a6a3a; outline-offset: 3px; }
+.skip-link:focus,
+.skip-link:focus-visible { transform: translateY(0); }
+main:focus { outline: none; }
+:focus-visible { outline: 3px solid var(--brown); outline-offset: 3px; }
 .landing-icon { display: block; flex: none; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 12px 22px; border-radius: 10px; font: 500 15px 'Roboto', sans-serif; cursor: pointer; border: 1.5px solid var(--brown); transition: .2s; }

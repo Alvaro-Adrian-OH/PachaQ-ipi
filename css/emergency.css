@@ -28,7 +28,11 @@
 }
 
 .alert-panel .muted {
-  color: #babcc2;
+  color: #d0d2d7;
+}
+
+.alert-panel .small-note {
+  color: #c5c8ce;
 }
 
 .alert-countdown {
@@ -102,6 +106,6 @@
 }
 
 .timer-bar time {
-  color: #ee5962;
+  color: #ff7b82;
   font-variant-numeric: tabular-nums;
 }

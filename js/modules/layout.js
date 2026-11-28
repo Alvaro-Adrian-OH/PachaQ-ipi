@@ -26,7 +26,78 @@ function makeLinks(currentPage, mobile) {
   }).join("");
 }
 
+export function navigateTo(url) {
+  if (!url) return;
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reducedMotion) {
+    window.location.href = url;
+    return;
+  }
+  document.body.classList.add("is-leaving");
+  window.setTimeout(function () {
+    window.location.href = url;
+  }, 160);
+}
+
+function setupSkipLink() {
+  const main = document.querySelector(".main-content");
+  if (main) {
+    if (!main.id) main.id = "main-content";
+    if (!main.hasAttribute("tabindex")) main.setAttribute("tabindex", "-1");
+  }
+
+  if (!document.querySelector(".skip-link")) {
+    const skip = document.createElement("a");
+    skip.className = "skip-link";
+    skip.href = main ? "#" + main.id : "#main-content";
+    skip.textContent = "Saltar al contenido";
+    document.body.prepend(skip);
+  }
+
+  document.addEventListener("click", function (event) {
+    const skip = event.target.closest(".skip-link");
+    if (!skip) return;
+    const targetId = skip.getAttribute("href");
+    if (!targetId || !targetId.startsWith("#")) return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollTo({ top: 0, behavior: "smooth" });
+    target.focus({ preventScroll: true });
+  });
+}
+
+function setupSmoothNavigation() {
+  window.addEventListener("pageshow", function () {
+    document.body.classList.remove("is-leaving");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (event.defaultPrevented || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const link = event.target.closest("a[href]");
+    if (!link || link.classList.contains("skip-link")) return;
+    if (link.target === "_blank" || link.hasAttribute("download")) return;
+
+    const rawHref = link.getAttribute("href") || "";
+    if (!rawHref || rawHref.startsWith("#") || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:") || rawHref.startsWith("javascript:")) {
+      return;
+    }
+
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin) return;
+    if (url.pathname === window.location.pathname && url.hash) return;
+
+    event.preventDefault();
+    navigateTo(url.href);
+  });
+}
+
 export function renderLayout() {
+  setupSkipLink();
+  setupSmoothNavigation();
+
   const currentPage = document.body.dataset.page || "";
   const isAuth = currentPage === "login" || currentPage === "forgot";
   const header = document.getElementById("site-header");
@@ -55,5 +126,10 @@ export function renderLayout() {
     ' href="profile.html"><span>Más</span></a>';
 
   const toast = document.getElementById("toast");
-  if (toast) toast.setAttribute("aria-live", "polite");
+  if (toast) {
+    toast.removeAttribute("hidden");
+    toast.setAttribute("aria-live", "polite");
+    toast.setAttribute("aria-atomic", "true");
+    toast.dataset.visible = "false";
+  }
 }

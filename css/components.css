@@ -74,9 +74,10 @@ h3 {
 
 .card-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px 12px;
   margin-bottom: 13px;
 }
 
@@ -217,9 +218,9 @@ h3 {
 
 .field label,
 .field-label {
-  color: #766d63;
+  color: #595047;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .07em;
   text-transform: uppercase;
 }
@@ -244,7 +245,7 @@ h3 {
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #a69c90;
+  color: #71685e;
 }
 
 .field input[type="checkbox"],
@@ -259,7 +260,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #988b7e;
+  color: #63594f;
   font-size: 11px;
 }
 
@@ -273,7 +274,7 @@ h3 {
 
 .notice {
   padding: 13px 15px;
-  color: #716456;
+  color: #564b3f;
   background: #f1ece3;
   border: 1px solid #ebe2d5;
   border-radius: 12px;
@@ -373,7 +374,7 @@ h3 {
 .option-state {
   flex: none;
   padding: 5px 9px;
-  color: #716b63;
+  color: #524c45;
   background: var(--surface-soft);
   border-radius: 999px;
   font-size: 10px;
@@ -618,19 +619,68 @@ body.large-text .main-content {
 }
 
 body.dark-mode {
-  --canvas: #282520;
-  --surface: #342d26;
-  --surface-soft: #40372d;
-  --earth: #dfcbb5;
-  --earth-dark: #2e221a;
+  --canvas: #24201b;
+  --surface: #302922;
+  --surface-soft: #3d342b;
+  --earth: #ead8c5;
+  --earth-dark: #251b14;
   --green: #8fb87e;
-  --green-dark: #a2c991;
-  --green-soft: #3d4c38;
-  --ink: #f4efe7;
-  --muted: #c0b3a5;
+  --green-dark: #a8d097;
+  --green-soft: #364732;
+  --ink: #f6f1ea;
+  --muted: #cec2b4;
   --line: #52473b;
   color: var(--ink);
   background: var(--canvas);
+}
+
+body.dark-mode .button.green,
+body.dark-mode .brand-mark,
+body.dark-mode .option[aria-pressed="true"] .option-state {
+  color: #162413;
+}
+
+body.dark-mode .button.green:hover {
+  color: #162413;
+  background: var(--green-dark);
+}
+
+body.dark-mode .add-avatar {
+  color: #162413;
+  background: var(--green);
+}
+
+body.dark-mode .tag {
+  color: #d7ecd0;
+  background: var(--green-soft);
+}
+
+body.dark-mode .tag.gold {
+  color: #f7e4bc;
+  background: #554223;
+}
+
+body.dark-mode .tag.red {
+  color: #ffd5d2;
+  background: #5e2726;
+}
+
+body.dark-mode .map-panel {
+  background: #302922;
+  border-color: #52473b;
+}
+
+body.dark-mode .map-place,
+body.dark-mode .map-gps-toggle,
+body.dark-mode .map-route-stat,
+body.dark-mode .map-frame-wrap {
+  color: var(--earth);
+  background: #3d342b;
+  border-color: #5b4c3b;
+}
+
+body.dark-mode .map-route-stat strong {
+  color: var(--earth);
 }
 
 body.dark-mode .site-header,

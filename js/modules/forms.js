@@ -1,5 +1,6 @@
-import { state, saveState } from "./state.js";
+import { state, saveState, parseCoordinatesFromText } from "./state.js";
 import { showToast } from "./feedback.js";
+import { navigateTo } from "./layout.js";
 
 function getInitials(name) {
   return name.trim().split(/\s+/).slice(0, 2)
@@ -56,27 +57,55 @@ function addSafeZone(form) {
   const data = new FormData(form);
   const name = String(data.get("zone") || "").trim();
   if (!name) return;
-  state.zones.push(name);
+
+  let rawLat = String(data.get("lat") || "").trim();
+  let rawLng = String(data.get("lng") || "").trim();
+  const mapsLink = String(data.get("mapsLink") || "").trim();
+
+  if ((!rawLat || !rawLng) && mapsLink) {
+    const parsed = parseCoordinatesFromText(mapsLink);
+    if (parsed.coords) {
+      rawLat = String(parsed.coords.lat);
+      rawLng = String(parsed.coords.lng);
+    } else if (parsed.isShortLink) {
+      showToast("Enlace corto detectado. Pega las coordenadas o el enlace completo de Google Maps.");
+      return;
+    }
+  }
+
+  let lat = null;
+  let lng = null;
+  if (rawLat !== "" || rawLng !== "") {
+    lat = Number(rawLat);
+    lng = Number(rawLng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+      showToast("Ingresa coordenadas válidas (latitud -90 a 90, longitud -180 a 180).");
+      return;
+    }
+  }
+
+  const newZone = lat !== null && lng !== null
+    ? { name: name, lat: Number(lat.toFixed(6)), lng: Number(lng.toFixed(6)) }
+    : name;
+
+  state.zones.push(newZone);
+  if (lat !== null && lng !== null) {
+    state.mapConfig.selectedTarget = "custom:" + (state.zones.length - 1);
+  }
   saveState();
 
-  const list = document.getElementById("safe-zone-list");
-  if (list) {
-    const row = document.createElement("div");
-    row.className = "list-row";
-    const label = document.createElement("strong");
-    label.textContent = name;
-    const detail = document.createElement("small");
-    detail.textContent = "Punto de encuentro familiar";
-    const text = document.createElement("span");
-    text.append(label, detail);
-    const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = "Encuentro";
-    row.append(text, tag);
-    list.appendChild(row);
-  }
   form.reset();
-  showToast("Zona segura agregada.");
+  const pasteStatus = document.querySelector("[data-paste-status]");
+  if (pasteStatus) {
+    pasteStatus.textContent = "Pega un enlace de Google Maps o coordenadas y se completarán automáticamente.";
+  }
+
+  document.dispatchEvent(new CustomEvent("zones:updated"));
+  showToast(
+    lat !== null && lng !== null
+      ? "Zona segura guardada con coordenadas y ruta peatonal lista."
+      : "Zona segura agregada."
+  );
 }
 
 export function handleFormSubmit(event) {
@@ -86,7 +115,7 @@ export function handleFormSubmit(event) {
 
   const formType = form.dataset.form;
   if (formType === "login") {
-    window.location.href = "assessment-material.html";
+    navigateTo("assessment-material.html");
   } else if (formType === "forgot") {
     showToast("Si el correo está registrado, recibirás un enlace de recuperación.");
   } else if (formType === "add-member") {
@@ -102,6 +131,6 @@ export function handleFormSubmit(event) {
     state.answer = selected.value;
     state.score = selected.value === "B" ? 100 : 40;
     saveState();
-    window.location.href = "results.html";
+    navigateTo("results.html");
   }
 }
