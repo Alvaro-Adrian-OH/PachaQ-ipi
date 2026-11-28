@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Refugios temporales y centros de salud cercanos, con ruta a pie y datos precargados.">
+  <title>Refugios y centros de salud - PachaQ’ipi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="shelters">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Después del sismo · Mapa</p><h1 id="page-title">Refugios y centros de salud</h1><p class="lead">Encuentra el lugar más cercano y la ruta a pie para llegar.</p></header>
+        <section class="map-panel" aria-labelledby="shelter-title">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">Mapa con datos precargados</p>
+              <h2 id="shelter-title">Lugares de ayuda cercanos</h2>
+            </div>
+            <span class="tag" data-shelter-connection>Datos precargados</span>
+          </div>
+          <div class="map-target-group" role="group" aria-label="Filtrar lugares por tipo">
+            <button class="button small green" type="button" data-shelter-filter="health" aria-pressed="true">Centros de Salud</button>
+            <button class="button small secondary" type="button" data-shelter-filter="shelter" aria-pressed="false">Refugios Temporales</button>
+            <button class="button small secondary" type="button" data-shelter-filter="emergency" aria-pressed="false">Comisarías y Bomberos</button>
+          </div>
+          <p class="small-note" data-shelter-status aria-live="polite"></p>
+          <div class="map-route-summary" aria-live="polite" aria-atomic="true">
+            <div class="map-route-stat"><span>Destino</span><strong data-shelter-dest>—</strong></div>
+            <div class="map-route-stat"><span>Ruta a pie</span><strong data-shelter-metrics>—</strong></div>
+          </div>
+          <div class="map-frame-wrap">
+            <div id="shelter-map" class="map-canvas" role="region" aria-label="Mapa con lugares de ayuda y ruta a pie"></div>
+          </div>
+          <div class="button-row">
+            <a class="button green" href="#" target="_blank" rel="noopener noreferrer" data-shelter-gmaps>Abrir ruta a pie en Google Maps</a>
+          </div>
+        </section>
+        <section class="card space-top-small" aria-labelledby="list-title">
+          <div class="card-heading"><h2 id="list-title">Del más cercano al más lejano</h2></div>
+          <div id="shelter-list"></div>
+        </section>
+        <p class="notice space-top-small">Sigue siempre las indicaciones de INDECI y de las autoridades locales. Si la ruta está bloqueada, busca otro lugar de la lista.</p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
