@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guías rápidas de primeros auxilios: RCP, hemorragias, fracturas, quemaduras y asfixia.">
+  <title>Primeros auxilios - PachaQ’ipi</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+</head>
+<body data-page="firstaid" data-critical="true">
+  <div class="site-layout" id="site-layout">
+    <header class="site-header" id="site-header"></header>
+    <aside class="side-navigation" id="side-navigation" aria-label="Navegación principal"></aside>
+    <main class="main-content">
+      <section class="page-content page-section narrow" aria-labelledby="page-title">
+        <header class="page-head"><p class="eyebrow">Después del sismo · Primeros auxilios</p><h1 id="page-title">Manual rápido de primeros auxilios</h1><p class="lead">Elige qué necesitas y sigue los pasos. Funciona sin gastar datos móviles.</p></header>
+        <p class="notice">Emergencias: Bomberos 116 · SAMU 106 · Policía 105</p>
+        <section class="card space-top-small" id="aid-categories-card" aria-labelledby="aid-categories-title">
+          <div class="card-heading"><h2 id="aid-categories-title">¿Qué necesitas hacer?</h2><span class="tag">5 guías</span></div>
+          <div class="aid-grid" id="aid-categories"></div>
+        </section>
+        <section class="card space-top-small aid-viewer" id="aid-viewer" aria-labelledby="aid-guide-title" hidden>
+          <div class="card-heading">
+            <h2 id="aid-guide-title" tabindex="-1"></h2>
+            <span class="tag" id="aid-step-count"></span>
+          </div>
+          <div class="aid-slide" aria-live="polite">
+            <div class="aid-illustration" id="aid-illustration" role="img" aria-label=""></div>
+            <h3 id="aid-slide-title"></h3>
+            <p id="aid-slide-text"></p>
+          </div>
+          <div class="aid-dots" id="aid-dots" aria-hidden="true"></div>
+          <div class="button-row">
+            <button class="button secondary" type="button" id="aid-prev">Anterior</button>
+            <button class="button green" type="button" id="aid-next">Siguiente</button>
+          </div>
+          <p class="space-top-small"><button class="text-button" type="button" id="aid-back">Volver a las guías</button></p>
+        </section>
+        <p class="small-note space-top-small">Guía referencial. No reemplaza la capacitación en primeros auxilios ni la atención médica profesional.</p>
+      </section>
+    </main>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegación para móvil"></nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
