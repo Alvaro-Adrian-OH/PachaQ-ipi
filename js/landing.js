@@ -1,6 +1,22 @@
 (() => {
   "use strict";
 
+  // Aplica las preferencias de lectura guardadas desde la aplicación.
+  const savedPreferences = (() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem("pachaqipi-app-state"));
+      return (saved && saved.preferences) || {};
+    } catch {
+      return {};
+    }
+  })();
+  const isLargeText = Boolean(savedPreferences.largeText);
+  const isSimpleMode = Boolean(savedPreferences.simpleMode);
+  document.documentElement.classList.toggle("large-text", isLargeText);
+  document.documentElement.classList.toggle("simple-mode", isSimpleMode);
+  document.body.classList.toggle("large-text", isLargeText);
+  document.body.classList.toggle("simple-mode", isSimpleMode);
+
   const iconNames = new Set(["sparkle", "check", "file", "users", "bag", "pin", "chevron", "play"]);
   const iconHTML = (name, size = 18) => {
     if (!iconNames.has(name)) return "";

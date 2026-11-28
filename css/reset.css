@@ -6,6 +6,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--canvas);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 

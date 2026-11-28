@@ -68,7 +68,7 @@
   }
 
   .auth-story h1 {
-    font-size: clamp(38px, 5vw, 52px);
+    font-size: clamp(2.375rem, 5vw, 3.25rem);
   }
 
   .illustration-slot {
@@ -110,7 +110,7 @@
 
   .brand {
     gap: 9px;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .brand-mark {
@@ -130,7 +130,7 @@
     min-height: 36px;
     padding: 7px 11px;
     border-radius: 999px;
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 
   .user-link {
@@ -173,7 +173,7 @@
     padding: 4px 2px;
     color: #5f564d;
     border-radius: 9px;
-    font-size: clamp(10px, 2.7vw, 11px);
+    font-size: clamp(0.625rem, 2.7vw, 0.6875rem);
     font-weight: 500;
     text-align: center;
   }
@@ -234,13 +234,13 @@
   }
 
   .auth-story .eyebrow {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .auth-story h1 {
     margin: 11px 0 9px;
     color: var(--earth);
-    font-size: clamp(34px, 9vw, 46px);
+    font-size: clamp(2.125rem, 9vw, 2.875rem);
   }
 
   .auth-story h1 span {
@@ -249,7 +249,7 @@
 
   .auth-story-copy > p {
     color: #5f564d;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.55;
   }
 
@@ -257,7 +257,7 @@
     gap: 8px 14px;
     margin-top: 11px;
     color: #544b41;
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 
   .illustration-slot {
@@ -281,7 +281,7 @@
   }
 
   .auth-heading h2 {
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
 
   .auth-panel .stack {
@@ -290,7 +290,7 @@
 
   .auth-privacy {
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .auth-recovery {
@@ -303,7 +303,7 @@
   }
 
   .dashboard-heading .lead {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .dashboard-heading .button {
@@ -327,12 +327,12 @@
 
   .welcome-copy h2 {
     max-width: 360px;
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   .welcome-copy p {
     margin: 9px 0 13px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .welcome-art-slot {
@@ -364,11 +364,11 @@
   }
 
   .quick-card strong {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .page-head h1 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 
   .dashboard-section-title,
@@ -415,13 +415,13 @@
   }
 
   .brand {
-    font-size: 14px;
+    font-size: 0.875rem;
     gap: 8px;
   }
 
   .header-emergency {
     padding: 6px 9px;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .main-content {

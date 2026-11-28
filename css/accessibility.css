@@ -1,0 +1,82 @@
+/* =========================================================
+   Accesibilidad: texto ampliado y modo simplificado
+   ========================================================= */
+
+/* Texto ampliado: escala todo el texto de la aplicación.
+   Las medidas tipográficas usan rem, por lo que basta con
+   aumentar el tamaño de la raíz. */
+html.large-text {
+  font-size: 125%;
+}
+
+/* El modo simplificado también mejora la lectura, pero con
+   un aumento más moderado para no duplicar el texto ampliado. */
+html.simple-mode:not(.large-text) {
+  font-size: 112%;
+}
+
+/* Controles un poco más cómodos en modo simplificado */
+body.simple-mode .button,
+body.simple-mode .text-button,
+body.simple-mode .nav-link,
+body.simple-mode .option,
+body.simple-mode .list-row,
+body.simple-mode .check-row,
+body.simple-mode .field input,
+body.simple-mode .field select,
+body.simple-mode .field textarea {
+  min-height: 48px;
+}
+
+body.simple-mode .button,
+body.simple-mode .text-button {
+  font-size: 0.875rem;
+}
+
+/* ---------------------------------------------------------
+   Modo simplificado: reducir textos explicativos.
+   Se excluyen las páginas marcadas con data-critical para no
+   ocultar información de emergencia.
+   --------------------------------------------------------- */
+body.simple-mode:not([data-critical]) .lead,
+body.simple-mode:not([data-critical]) p.eyebrow,
+body.simple-mode:not([data-critical]) .muted,
+body.simple-mode:not([data-critical]) .small-note:not([role="status"]):not([aria-live]),
+body.simple-mode:not([data-critical]) .list-row small,
+body.simple-mode:not([data-critical]) .check-row small,
+body.simple-mode:not([data-critical]) .option small,
+body.simple-mode:not([data-critical]) .quick-card small,
+body.simple-mode:not([data-critical]) .risk-row small,
+body.simple-mode:not([data-critical]) .emergency-card small,
+body.simple-mode:not([data-critical]) .welcome-copy p,
+body.simple-mode:not([data-critical]) .auth-story-copy > p,
+body.simple-mode:not([data-critical]) .auth-heading p,
+body.simple-mode:not([data-critical]) .auth-privacy,
+body.simple-mode:not([data-critical]) .empty-note {
+  display: none;
+}
+
+/* Conservar información útil que no es solo explicativa. */
+body.simple-mode:not([data-critical]) .lead[data-result-text],
+body.simple-mode:not([data-critical]) .accessibility-toggle small,
+body.simple-mode:not([data-critical]) .member-info small {
+  display: block;
+}
+
+body.simple-mode:not([data-critical]) [data-simple-keep] {
+  display: block !important;
+}
+
+/* ---------------------------------------------------------
+   Modo simplificado: ocultar opciones y bloques no vitales.
+   --------------------------------------------------------- */
+body.simple-mode:not([data-critical]) [data-simple-hide],
+body.simple-mode:not([data-critical]) .map-gps-toggle,
+body.simple-mode:not([data-critical]) .plan-cover,
+body.simple-mode:not([data-critical]) .simulation-video,
+body.simple-mode:not([data-critical]) [data-action="refresh-gps"],
+body.simple-mode:not([data-critical]) [data-action="paste-zone-link"],
+body.simple-mode:not([data-critical]) [data-action="google"],
+body.simple-mode:not([data-critical]) .divider {
+  display: none !important;
+}

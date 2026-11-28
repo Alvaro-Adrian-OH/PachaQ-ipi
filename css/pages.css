@@ -101,7 +101,7 @@
 .map-route-stat span {
   display: block;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -111,7 +111,7 @@
   display: block;
   margin-top: 3px;
   color: var(--earth);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .map-frame-wrap {
@@ -171,7 +171,7 @@
   background: var(--surface);
   border: 1px solid #dce2d4;
   border-radius: 9px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 750;
 }
 
@@ -200,7 +200,7 @@
 .choice-option strong {
   display: block;
   color: var(--earth);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .choice-option.selected {
@@ -230,7 +230,7 @@
   color: var(--green);
   background: var(--green-soft);
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 800;
   animation: pulse 1.2s ease-in-out infinite;
 }
@@ -247,7 +247,7 @@
 .result-score {
   margin: 12px 0;
   color: var(--green);
-  font-size: 27px;
+  font-size: 1.6875rem;
   font-weight: 800;
 }
 
@@ -255,7 +255,7 @@
   margin: 0;
   padding-left: 21px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .protocol-list li + li {
@@ -264,7 +264,7 @@
 
 .resource-total {
   color: var(--earth);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 800;
 }
 

@@ -12,7 +12,7 @@
 
 .dashboard-heading h1 {
   margin: 0;
-  font-size: clamp(26px, 2.4vw, 34px);
+  font-size: clamp(1.625rem, 2.4vw, 2.125rem);
 }
 
 .dashboard-heading .lead {
@@ -66,7 +66,7 @@
 .welcome-copy h2 {
   margin-top: 12px;
   color: var(--earth);
-  font-size: clamp(28px, 2.6vw, 38px);
+  font-size: clamp(1.75rem, 2.6vw, 2.375rem);
   line-height: 1.08;
 }
 
@@ -74,7 +74,7 @@
   max-width: 380px;
   margin: 12px 0 18px;
   color: #574c40;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.65;
 }
 
@@ -112,7 +112,7 @@
 
 .dashboard-section-title h2,
 .dashboard-section-title h3 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .progress-card {
@@ -147,7 +147,7 @@
   border: 3px solid #8e877f;
   border-right-color: white;
   border-radius: 50%;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
 }
 
@@ -165,7 +165,7 @@
 
 .progress-detail .muted {
   margin: 6px 0 0;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .quick-grid {
@@ -195,12 +195,12 @@
 
 .quick-card strong {
   color: var(--earth);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .quick-card small {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .readiness-card .card-heading {
@@ -236,14 +236,14 @@
 .risk-row strong,
 .today-task strong {
   color: var(--earth);
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .risk-row small,
 .today-task small {
   margin-top: 3px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .today-task {
@@ -290,7 +290,7 @@
 
 .family-card > .muted {
   margin-bottom: 0;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .emergency-card {
@@ -314,12 +314,12 @@
 }
 
 .emergency-card strong {
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .emergency-card small {
   margin-top: 3px;
   color: #5e4335;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.4;
 }

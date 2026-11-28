@@ -28,8 +28,16 @@ function updateKitProgress() {
 
 function applyPreferences() {
   const preferences = state.preferences;
-  document.body.classList.toggle("dark-mode", preferences.dark);
-  document.body.classList.toggle("large-text", preferences.largeText || preferences.simpleMode);
+  const root = document.documentElement;
+  const largeText = Boolean(preferences.largeText);
+  const simpleMode = Boolean(preferences.simpleMode);
+
+  root.classList.toggle("large-text", largeText);
+  root.classList.toggle("simple-mode", simpleMode);
+  document.body.classList.toggle("large-text", largeText);
+  document.body.classList.toggle("simple-mode", simpleMode);
+  document.body.classList.toggle("dark-mode", Boolean(preferences.dark));
+
   document.querySelectorAll("[data-pref]").forEach(function (toggle) {
     toggle.checked = Boolean(preferences[toggle.dataset.pref]);
   });

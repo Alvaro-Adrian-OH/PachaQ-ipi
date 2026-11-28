@@ -73,13 +73,13 @@
         <form class="card item-form stack" data-form="add-zone" aria-labelledby="add-zone-title">
           <div class="card-heading">
             <h2 id="add-zone-title">Agregar una zona segura</h2>
-            <span class="tag">Coordenadas o pin</span>
+            <span class="tag" data-simple-hide>Coordenadas o pin</span>
           </div>
           <div class="field">
             <label for="zone-name">Nombre o referencia</label>
             <input id="zone-name" name="zone" placeholder="Ej.: Parque Juan Pablo II, San Miguel" required>
           </div>
-          <div class="field">
+          <div class="field" data-simple-hide>
             <label for="zone-maps-link">Pegar enlace o pin de Google Maps (opcional)</label>
             <div class="input-with-action">
               <input id="zone-maps-link" name="mapsLink" type="text" placeholder="Ej.: https://maps.google.com/?q=-12.0765,-77.0842 o -12.0765, -77.0842">
@@ -87,7 +87,7 @@
             </div>
             <small class="small-note" data-paste-status aria-live="polite">Pega un enlace de Google Maps o coordenadas y se completarán automáticamente.</small>
           </div>
-          <div class="coords-grid">
+          <div class="coords-grid" data-simple-hide>
             <div class="field">
               <label for="zone-lat">Latitud</label>
               <input id="zone-lat" name="lat" type="number" step="any" min="-90" max="90" placeholder="-12.0765">

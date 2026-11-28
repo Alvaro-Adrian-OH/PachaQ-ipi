@@ -18,13 +18,13 @@
   place-items: center;
   border: 2px solid #e53a4a;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
 .alert-panel h2 {
   color: white;
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 
 .alert-panel .muted {
@@ -40,7 +40,7 @@
   color: #8e1d24;
   background: #ffeaeb;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
 }
 
@@ -66,7 +66,7 @@
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 0 10px rgb(255 255 255 / 9%);
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 850;
 }
 
@@ -87,7 +87,7 @@
   color: #8f2023;
   background: white;
   border-radius: 12px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: .04em;
 }
@@ -101,7 +101,7 @@
   color: white;
   background: #20232a;
   border-radius: 12px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
 }
 
